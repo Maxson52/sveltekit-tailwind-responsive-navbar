@@ -1,20 +1,10 @@
-# create-svelte
+# SvelteKit & Tailwind Fully Responsive & Expandable Navbar Component
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Using a few prebuilt components and the power of SvelteKit with Tailwind, you can have a fully responsive, expandable, and beautiful looking navbar in no time. By default, it uses position sticky, however it's easy to dive right in and customize it to your liking!
 
-## Creating a project
+## Usage
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+After you've cloned the repo, using the navbar itself is easy. `<Nav></Nav>` is the parent widget. Give a child a `slot="logo"` for left aligned content, perfect for the logo. Use the `<NavLink></NavLink>` component with the prop `link=""` for the href, and pass whatever text you want as a child. For a dropdown, use `<NavLinkWithDropdown></NavLinkWithDropdown>` and a property of `name=""` for the text to be hovered. Then the dropdown links is as easy as before, using `<NavDropdownLink link="/">Text Here</NavDropdownLink>`.
 
 ## Developing
 
@@ -26,13 +16,3 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
